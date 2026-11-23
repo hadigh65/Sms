@@ -1,0 +1,19 @@
+name: Test GitHub Actions
+
+'on':
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Confirm workflow detection
+        run: |
+          echo "GitHub Actions detected this workflow."
+          echo "Repository files:"
+          find . -maxdepth 4 -type f | sort
