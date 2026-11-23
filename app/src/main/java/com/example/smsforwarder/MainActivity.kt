@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.content.Context
 import android.content.pm.PackageManager
 import android.view.Gravity
+import android.view.View
 import android.widget.*
 import android.graphics.Typeface
 import android.text.InputType
@@ -30,7 +31,7 @@ class MainActivity : Activity() {
             orientation = LinearLayout.VERTICAL
             setPadding(28, 38, 28, 24)
             gravity = Gravity.TOP
-            layoutDirection = LinearLayout.LayoutDirection.RTL
+            layoutDirection = View.LAYOUT_DIRECTION_RTL
         }
         val title = TextView(this).apply {
             text = "انتقال خودکار پیامک"
